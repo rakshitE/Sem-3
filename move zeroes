@@ -1,1 +1,22 @@
 https://leetcode.com/problems/move-zeroes/submissions/1401480568
+void moveZeroes(int* nums, int numsSize) {
+    int tmp, *j;
+    int *ptr = nums;
+
+    for (int i = 0; i < numsSize; i++)
+    {
+        if (*ptr != 0)
+            ptr++;
+        else
+        {
+            j = ptr;
+            while (j < &nums[numsSize - 1])
+            {
+                tmp = *j;
+                *j = *(j+1);
+                *(j+1) = tmp;
+                j++;
+            }
+        }
+    }
+}
