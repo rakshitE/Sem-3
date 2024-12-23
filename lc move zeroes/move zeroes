@@ -1,4 +1,5 @@
 https://leetcode.com/problems/move-zeroes/submissions/1401480568
+
 void moveZeroes(int* nums, int numsSize) {
     int tmp, *j;
     int *ptr = nums;
